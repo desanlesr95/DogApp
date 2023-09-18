@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Doga</string>
+    <string name="input_username">Username</string>
+    <string name="input_password">Contraseña</string>
+    <string name="button_login">Entrar</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_home">Mis mascotas</string>
+    <string name="title_dashboard">Descubre</string>
+    <string name="title_notifications">Cuidados</string>
+    <string name="title_breed">Razas de perros</string>
+</resources>
