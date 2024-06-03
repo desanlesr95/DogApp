@@ -4,7 +4,7 @@
     <data>
         <variable
             name="breed"
-            type="com.example.dogapp.model.Breed" />
+            type="com.example.dogapp.model.entitiy.Breed" />
     </data>
     <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"

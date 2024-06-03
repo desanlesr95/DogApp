@@ -10,9 +10,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.example.dogapp.databinding.FragmentDashboardBinding
-import com.example.dogapp.model.Breed
+import com.example.dogapp.model.entitiy.Breed
 import com.example.dogapp.presenter.DiscoverPresenter
-import java.util.Arrays
 
 class DashboardFragment : Fragment(), DiscoverContract.View {
 

@@ -1,6 +1,6 @@
 package com.example.dogapp.view.ui.dashboard
 
-import com.example.dogapp.model.Breed
+import com.example.dogapp.model.entitiy.Breed
 
 interface DiscoverContract {
     interface View{

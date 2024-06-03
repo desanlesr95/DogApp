@@ -1,4 +1,4 @@
-package com.example.dogapp.model
+package com.example.dogapp.model.entitiy
 
 class Breed(val name:String,val subBreed:List<String>,var images:List<String>){
     override fun toString(): String {

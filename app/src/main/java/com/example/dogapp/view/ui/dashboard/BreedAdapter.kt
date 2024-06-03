@@ -1,12 +1,10 @@
 package com.example.dogapp.view.ui.dashboard
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dogapp.databinding.CardBreedBinding
-import com.example.dogapp.model.Breed
+import com.example.dogapp.model.entitiy.Breed
 
 class BreedAdapter(var listOfBreeds: ArrayList<Breed>):RecyclerView.Adapter<BreedAdapter.ViewHolder>() {
    var binding: CardBreedBinding ?= null

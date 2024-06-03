@@ -1,13 +1,13 @@
-package com.example.dogapp.utils.retrofit
+package com.example.dogapp.utils.singleton
 
-import com.example.dogapp.model.ApiService
+import com.example.dogapp.model.repository.ApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-class RetrofitAdapter {
+class RetrofitSingleton {
     lateinit var okHttpClient:OkHttpClient
 
    constructor(){

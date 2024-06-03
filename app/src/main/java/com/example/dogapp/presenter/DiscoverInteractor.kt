@@ -1,25 +1,19 @@
 package com.example.dogapp.presenter
 
-import android.util.Log
-import com.example.dogapp.model.ApiService
-import com.example.dogapp.model.Breed
-import com.example.dogapp.model.BreedImageRandom
+import com.example.dogapp.model.repository.ApiService
+import com.example.dogapp.model.entitiy.Breed
 import com.example.dogapp.utils.Utils
-import com.example.dogapp.utils.retrofit.RetrofitAdapter
+import com.example.dogapp.utils.singleton.RetrofitSingleton
 import com.example.dogapp.view.ui.dashboard.DiscoverContract
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
-import okhttp3.Dispatcher
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class DiscoverInteractor(val discoverPresenter: DiscoverPresenter):DiscoverContract.Interactor {
     lateinit var apiService: ApiService
 
     override fun getBreedList(breedMap: HashMap<String, List<String>>) {
-        apiService = RetrofitAdapter().getApiAdapter(Utils.URL_DOG_API)
+        apiService = RetrofitSingleton().getApiAdapter(Utils.URL_DOG_API)
         var listOfBreed = ArrayList<Breed>()
         runBlocking {
             breedMap.forEach {
