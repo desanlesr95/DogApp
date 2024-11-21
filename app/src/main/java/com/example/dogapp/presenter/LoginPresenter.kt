@@ -4,6 +4,7 @@ import android.content.Context
 import com.example.dogapp.model.repository.ApiService
 import com.example.dogapp.model.LoginResponse
 import com.example.dogapp.model.entitiy.User
+import com.example.dogapp.model.repository.ApiPet
 import com.example.dogapp.utils.Utils
 import com.example.dogapp.utils.singleton.AppDatabase
 import com.example.dogapp.utils.singleton.RetrofitSingleton
@@ -17,9 +18,10 @@ class LoginPresenter(private val view: LoginContract.View,private val  context: 
     lateinit var apiService: ApiService
     lateinit var appDatabase: AppDatabase
     override fun checkCredentials(username: String, password: String) {
-        apiService = RetrofitSingleton().getApiAdapter(Utils.URL_DOGAPP_API)
+        apiService = RetrofitSingleton().getApiAdapter(ApiPet.BASE_URL)
         apiService.getLogin(username,password).enqueue(object :Callback<LoginResponse>{
             override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
+                println(response.toString())
                 return view.responseLogin(response.body()!!)
             }
             override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
@@ -30,14 +32,14 @@ class LoginPresenter(private val view: LoginContract.View,private val  context: 
     }
 
     override fun saveUserDB(user: User) {
-        appDatabase = AppDatabase.geInstance(context)
+        appDatabase = AppDatabase.getInstance(context)
         appDatabase.getUserDao().insertUser(user)
         view.loggedActive(true)
         appDatabase.close()
     }
 
     override fun isLogged() {
-        appDatabase = AppDatabase.geInstance(context)
+        appDatabase = AppDatabase.getInstance(context)
         if (appDatabase.getUserDao().getUserLogged()!=0){
             view.loggedActive(true)
         }

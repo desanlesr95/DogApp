@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Doga</string>
+    <string name="app_name">Petiverse life</string>
     <string name="input_username">Username</string>
     <string name="input_password">Contraseña</string>
     <string name="button_login">Entrar</string>
@@ -8,4 +8,11 @@
     <string name="title_dashboard">Descubre</string>
     <string name="title_notifications">Cuidados</string>
     <string name="title_breed">Razas de perros</string>
+    <string name="name_pet">Nombre</string>
+    <string name="pet_type">Tipo de mascota</string>
+    <string name="age">Año</string>
+    <string name="breed">Raza</string>
+    <string name="color">Color</string>
+    <string name="gender">Genero</string>
+
 </resources>

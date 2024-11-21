@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/azul_bajito"
+    app:title="Mascota">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_default">
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mascotas"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:textSize="@dimen/titleSize"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agregar Mascota"
+            android:textSize="@dimen/textview_defauld"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+</androidx.appcompat.widget.Toolbar>

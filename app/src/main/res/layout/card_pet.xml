@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/margin_text"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/azul_tuquesa"
+        android:layout_margin="@dimen/margin_text">
+
+            <ImageView
+                android:id="@+id/imgpet"
+                android:src="@mipmap/img_pet"
+                android:layout_width="@dimen/space_img"
+                android:layout_height="@dimen/space_img"
+                android:scaleType="centerCrop"
+                android:layout_centerVertical="true"/>
+
+            <LinearLayout
+                android:id="@+id/llname"
+                android:layout_toRightOf="@+id/imgpet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name_pet"
+                    tools:ignore="MissingConstraints"
+                    android:layout_margin="@dimen/margin_text"
+                    android:padding="@dimen/Pading_text"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvnombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vaquita"
+                    android:layout_margin="@dimen/margin_text"
+                    android:padding="@dimen/Pading_text"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lltipo"
+                android:layout_toRightOf="@+id/imgpet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/llname">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pet_type"
+                    tools:ignore="MissingConstraints"
+                    android:layout_margin="@dimen/margin_text"
+                    android:padding="@dimen/Pading_text"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvtipo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Perro"
+                    android:layout_margin="@dimen/margin_text"
+                    android:padding="@dimen/Pading_text"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llano"
+                android:layout_toRightOf="@+id/imgpet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/lltipo">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/age"
+                    tools:ignore="MissingConstraints"
+                    android:layout_margin="@dimen/margin_text"
+                    android:padding="@dimen/Pading_text"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvano"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:layout_margin="@dimen/margin_text"
+                    android:padding="@dimen/Pading_text"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llbreed"
+                android:layout_toRightOf="@+id/imgpet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/llano">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/breed"
+                    tools:ignore="MissingConstraints"
+                    android:layout_margin="@dimen/margin_text"
+                    android:padding="@dimen/Pading_text"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvraza"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Akita"
+                    android:layout_margin="@dimen/margin_text"
+                    android:padding="@dimen/Pading_text"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llcolor"
+                android:layout_toRightOf="@+id/imgpet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/llbreed">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/color"
+                    tools:ignore="MissingConstraints"
+                    android:layout_margin="@dimen/margin_text"
+                    android:padding="@dimen/Pading_text"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvcolor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="blanco y negro"
+                    android:layout_margin="@dimen/margin_text"
+                    android:padding="@dimen/Pading_text"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llgender"
+                android:layout_toRightOf="@+id/imgpet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/llcolor">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gender"
+                    tools:ignore="MissingConstraints"
+                    android:layout_margin="@dimen/margin_text"
+                    android:padding="@dimen/Pading_text"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvgenero"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="hembra"
+                    android:layout_margin="@dimen/margin_text"
+                    android:padding="@dimen/Pading_text"
+                    />
+
+            </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

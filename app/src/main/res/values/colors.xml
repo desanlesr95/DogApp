@@ -3,4 +3,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="input_color">#D8D8D8</color>
+    <color name="azul_bajito">#C87098D3</color>
+    <color name="azul_tuquesa">#C83BA89B</color>
 </resources>

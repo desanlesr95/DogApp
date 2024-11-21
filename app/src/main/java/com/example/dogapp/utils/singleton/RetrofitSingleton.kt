@@ -1,5 +1,6 @@
 package com.example.dogapp.utils.singleton
 
+import com.example.dogapp.model.repository.ApiPet.BASE_URL
 import com.example.dogapp.model.repository.ApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -19,17 +20,20 @@ class RetrofitSingleton {
            .writeTimeout(2000, TimeUnit.SECONDS)
            .readTimeout(3000, TimeUnit.SECONDS)
            .build()
+
    }
 
-    fun  getApiAdapter(urlApi:String): ApiService {
+    fun  getApiAdapter(BASE_URL:String): ApiService {
         val retrofit = Retrofit.Builder()
             .client(okHttpClient)
-            .baseUrl(urlApi)
+            .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
         return  retrofit.create(ApiService::class.java)
 
     }
+
+
 
 
 }
