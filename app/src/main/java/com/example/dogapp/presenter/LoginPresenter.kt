@@ -21,11 +21,15 @@ class LoginPresenter(private val view: LoginContract.View,private val  context: 
         apiService = RetrofitSingleton().getApiAdapter(ApiPet.BASE_URL)
         apiService.getLogin(username,password).enqueue(object :Callback<LoginResponse>{
             override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
-                println(response.toString())
-                return view.responseLogin(response.body()!!)
+                println("lo1 $response")
+                if (response.code() == 200){
+                    return view.responseLogin(response.body()!!)
+
+                }
+                return view.responseLogin(null)
             }
             override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
-                println(t.message.toString())
+                println("l2 ${t.message}")
                 return view.responseLogin(null)
             }
         })
