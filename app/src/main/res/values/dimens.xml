@@ -19,5 +19,6 @@
     <dimen name="margin_top">40dp</dimen>
     <dimen name="textview_size">18sp</dimen>
     <dimen name="textview_defauld">12sp</dimen>
+    <dimen name="padding_md">12dp</dimen>
 
 </resources>

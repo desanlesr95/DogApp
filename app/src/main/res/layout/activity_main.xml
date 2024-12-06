@@ -40,6 +40,7 @@
             android:layout_marginTop="@dimen/margin_default"
             android:id="@+id/username"
             style="@style/InputStyle"
+            android:textColorHint="#4B4B4B"
             android:hint="@string/input_username"
             app:layout_constraintTop_toBottomOf="@+id/nameApp"
             app:layout_constraintStart_toStartOf="parent"
@@ -65,12 +66,89 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btnLogin"
+            android:backgroundTint="@color/backgroundButton"
+            android:paddingHorizontal="@dimen/Pading_text"
             app:layout_constraintTop_toBottomOf="@id/password"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="@dimen/margin_default"
             android:textSize="@dimen/textSizeDefault"
             android:text="@string/button_login"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/text_secondary"
+            android:text="@string/or_login_with"
+            android:textStyle="italic"
+            android:layout_marginVertical="@dimen/margin_text"
+            android:id="@+id/login_with"
+            android:textSize="@dimen/textSizeDefault"
+            />
+
+        <LinearLayout android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/lytLoginWith"
+            app:layout_constraintTop_toBottomOf="@+id/login_with"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/cromo"
+                android:backgroundTint="@color/accent"
+                android:text="Google"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/facebook"
+                android:layout_marginHorizontal="@dimen/margin_default"
+                android:backgroundTint="@color/accent"
+                android:text="Google"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/apple"
+                android:backgroundTint="@color/accent"
+                android:text="Google"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/lytLoginWith"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/text_secondary"
+            android:text="@string/forget_password"
+            android:textStyle="italic"
+            android:layout_marginVertical="@dimen/margin_text"
+            android:id="@+id/regsiter"
+            android:textSize="@dimen/textSizeDefault"
+            />
+
+
+        <TextView
+            android:layout_marginVertical="@dimen/margin_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/regsiter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/text_tertiary"
+            android:text="@string/register"
+            android:textStyle="italic"
+            android:textSize="@dimen/textSizeDefault"
+            />
 
 
 
