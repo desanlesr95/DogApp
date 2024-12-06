@@ -1,8 +1,10 @@
 package com.example.dogapp.view
 
+import PetiverseToast
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.bumptech.glide.Glide
@@ -28,6 +30,7 @@ class MainActivity : AppCompatActivity(),LoginContract.View{
         presenter.isLogged()
         binding.btnLogin.setOnClickListener(object : View.OnClickListener{
             override fun onClick(p0: View?) {
+                PetiverseToast.showMessage(applicationContext,"Validando credenciales...", isProgress = true)
                 presenter.checkCredentials(binding.username.text.toString(),binding.password.text.toString())
             }
         })
@@ -35,9 +38,16 @@ class MainActivity : AppCompatActivity(),LoginContract.View{
     }
 
     override fun responseLogin(response: LoginResponse?) {
-        var user = response!!.user
-        user.token = response!!.token
-        presenter.saveUserDB(user)
+        PetiverseToast.dismiss()
+        if(response == null){
+            PetiverseToast.showMessage(this,"Credenciales incorrectas",Toast.LENGTH_SHORT)
+        }else{
+            var user = response!!.user
+            user.token = response!!.token
+            presenter.saveUserDB(user)
+            PetiverseToast.showMessage(this,"Credenciales correctas",Toast.LENGTH_SHORT)
+        }
+
     }
 
     override fun loggedActive(logged: Boolean) {

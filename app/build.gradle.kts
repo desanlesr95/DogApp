@@ -41,6 +41,7 @@ android {
 }
 
 dependencies {
+    implementation("androidx.activity:activity:1.8.0")
     val room_version = "2.5.2"
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
@@ -56,10 +57,20 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.6.4")
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.3")
     annotationProcessor("com.github.bumptech.glide:compiler:4.12.0")
+    // Coroutines para Android
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0")
+    // ViewModel y LiveData
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0")
+    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.4.0")
+    // Dependencia de lifecycle-runtime-ktx
+    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.4.0")
     //Room
     implementation("androidx.room:room-runtime:$room_version")
     annotationProcessor("androidx.room:room-compiler:$room_version")
     kapt("androidx.room:room-compiler:$room_version")
+    //picasso
+    implementation ("com.squareup.picasso:picasso:2.71828")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")

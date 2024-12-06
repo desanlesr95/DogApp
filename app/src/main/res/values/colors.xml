@@ -3,4 +3,14 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="input_color">#D8D8D8</color>
+    <color name="azul_bajito">#C87098D3</color>
+    <color name="azul_tuquesa">#C83BA89B</color>
+    <color name="primary">#4CB9A9</color>
+    <color name="secondary">#FFA866</color>
+    <color name="background">#F9F9F9</color>
+    <color name="constrant">#333333</color>
+    <color name="accent">#47A84D</color>
+    <color name="error">#E57373</color>
+    <color name="border">#E0E0E0</color>
+    <color name="text_desc">#9E9E9E</color>
 </resources>

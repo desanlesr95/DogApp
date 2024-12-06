@@ -5,6 +5,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/background"
         tools:context=".view.MainActivity">
 
 
@@ -30,6 +31,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
+
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -51,6 +54,7 @@
             style="@style/InputStyle"
             android:layout_marginTop="@dimen/margin_default"
             android:id="@+id/password"
+            android:inputType="textPassword"
             app:layout_constraintTop_toBottomOf="@+id/username"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
